@@ -24,16 +24,16 @@ public class DayTimeEntity implements Parcelable {
 
     public String getStartTime() {
         String time = "";
-        if (month < 10 && day < 10) {
+        if (month + 1 < 10 && day < 10) {
             time = year + "0" + (month + 1) + "0" + day;
         }
-        if (month < 10 && day > 9) {
+        if (month + 1 < 10 && day > 9) {
             time = year + "0" + (month + 1) + "" + day;
         }
-        if (month > 9 && day > 9) {
+        if (month + 1 > 9 && day > 9) {
             time = year + "" + (month + 1) + "" + day;
         }
-        if (month > 9 && day < 10) {
+        if (month + 1 > 9 && day < 10) {
             time = year + "" + (month + 1) + "0" + day;
         }
         return time;
@@ -41,16 +41,16 @@ public class DayTimeEntity implements Parcelable {
 
     public String getEndTime() {
         String time = "";
-        if (month < 10 && day < 10) {
+        if (month + 1 < 10 && day < 10) {
             time = year + "0" + (month + 1) + "0" + day;
         }
-        if (month < 10 && day > 9) {
+        if (month + 1 < 10 && day > 9) {
             time = year + "0" + (month + 1) + "" + day;
         }
-        if (month > 9 && day > 9) {
+        if (month + 1 > 9 && day > 9) {
             time = year + "" + (month + 1) + "" + day;
         }
-        if (month > 9 && day < 10) {
+        if (month + 1 > 9 && day < 10) {
             time = year + "" + (month + 1) + "0" + day;
         }
         return time;
