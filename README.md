@@ -2,7 +2,7 @@
 通过日历选择一段时间<br>
 参考了https://github.com/richzjc/calendar_select项目修改了一些自己需要的功能
 ## 添加依赖
-    implementation 'com.github.AndroidLMY:TimeLibrary:1.0.3'
+    implementation 'com.github.AndroidLMY:TimeLibrary:1.0.4'
 ## 布局引用
 ```
     <com.example.timelibrary.CalendarSelectView
