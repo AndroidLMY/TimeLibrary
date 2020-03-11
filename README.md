@@ -1,29 +1,37 @@
 # TimeLibrary
 通过日历选择一段时间<br>
-参考了https://github.com/richzjc/calendar_select项目修改了一些自己需要的功能<br>
-## 添加依赖<br>
-    implementation 'com.github.AndroidLMY:TimeLibrary:1.0.3'<br>
-## 布局引用<br>
-<com.example.timelibrary.CalendarSelectView<br>
-android:id="@+id/calendar_select"<br>
-android:layout_width="match_parent"<br>
-android:layout_height="match_parent"<br>
-android:clickable="true"<br>
-app:locate_position="today"<br>
-app:select_type="mult"><br>
-</com.example.timelibrary.CalendarSelectView><br>
-## Activity使用<br>
+参考了https://github.com/richzjc/calendar_select项目修改了一些自己需要的功能
+## 添加依赖
+    implementation 'com.github.AndroidLMY:TimeLibrary:1.0.4'
+## 布局引用
+```
+    <com.example.timelibrary.CalendarSelectView
+        android:id="@+id/calendar_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        app:locate_position="today"
+        app:select_type="mult"/>
 
- calendarSelect.setistitleTimeShow(false);//隐藏控件顶部时间<br>
- ConfirmSelectDateCallback selectDateCallback = new ConfirmSelectDateCallback() {<br>
-            @Override<br>
-            public void selectSingleDate(DayTimeEntity timeEntity) {<br>
-                //TODO 单选回调此方法<br>
-            }<br>
-            @Override<br>
-            public void selectMultDate(DayTimeEntity startTimeEntity, DayTimeEntity endTimeEntity) {<br>
-                //TODO 选择时间段回调些方法<br>
-                Toast.makeText(SelectSpellActivity.this, startTimeEntity.getStartTime() + "///" + endTimeEntity.getEndTime(), Toast.LENGTH_SHORT).show();<br>
-            }<br>
-        };<br>
-        calendarSelect.setConfirmCallback(selectDateCallback);<br>
+```
+
+## Activity使用
+```
+        calendarSelect.setistitleTimeShow(false);//隐藏控件顶部时间
+        ConfirmSelectDateCallback selectDateCallback = new ConfirmSelectDateCallback() {
+            @Override
+            public void selectSingleDate(DayTimeEntity timeEntity) {
+                //TODO 单选回调此方法
+            }
+
+            @Override
+            public void selectMultDate(DayTimeEntity startTimeEntity, DayTimeEntity endTimeEntity) {
+                //TODO 选择时间段回调些方法
+                Toast.makeText(SelectSpellActivity.this, startTimeEntity.getStartTime() + 
+                        "///" + endTimeEntity.getEndTime(), Toast.LENGTH_SHORT).show();
+            }
+        };
+        calendarSelect.setConfirmCallback(selectDateCallback);
+
+```
+ 
